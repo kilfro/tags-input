@@ -1,6 +1,6 @@
 {
   "name": "@kilfro/tags-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component for managing tags",
   "keywords": ["react", "input", "tags", "tag"],
   "author": "Kirill Frolov",
