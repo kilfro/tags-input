@@ -2,7 +2,7 @@
 
 > 
 
-[![NPM](https://img.shields.io/npm/v/@kilfro/tags-input.svg)](https://www.npmjs.com/package/@kilfro/tags-input) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/kilfro/tags-input.svg?branch=master)](https://travis-ci.org/kilfro/tags-input) [![NPM](https://img.shields.io/npm/v/@kilfro/tags-input.svg)](https://www.npmjs.com/package/@kilfro/tags-input) 
 
 ## Install
 
