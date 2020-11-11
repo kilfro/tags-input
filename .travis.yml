@@ -5,6 +5,9 @@ node_js:
 script:
   - npm run test -- --verbose
 
+before_deploy:
+  - npm run build
+
 deploy:
   provider: npm
   email: frolov.cyrill@gmail.com
