@@ -37,6 +37,7 @@ autoPasted | boolean | false | Automatically splitting pasted string to tags by 
 splitter | string | ```' '``` | String for autosplit long string to tags
 inputStyle | object | | Inline styles for input field
 inputClassName | string | | Class names for input field
+tagsPosition| `'top' | 'bottom'`| `'bottom'` | Use to change position of tags list
 
 ## Custom tag wrapper 
 
