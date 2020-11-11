@@ -10,7 +10,7 @@ const tagsInputWrapper = {
 }
 
 export const TagsInput = props => {
-    const { values, onChange, TagItemWrapper, ...inputFieldProps } = props
+    const { tagsPosition, values, onChange, TagItemWrapper, ...inputFieldProps } = props
 
     const removeHandler = valueToRemove => {
         onChange(values.filter(v => v !== valueToRemove))
@@ -47,8 +47,10 @@ TagsInput.propTypes = {
     inputStyle: PropTypes.object,
     inputClassName: PropTypes.string,
     TagItemWrapper: PropTypes.elementType,
+    tagsPosition: PropTypes.oneOf(['bottom', 'top']),
 }
 
 TagsInput.defaultProps = {
-    splitter: ' '
+    splitter: ' ',
+    tagsPosition: 'bottom',
 }
