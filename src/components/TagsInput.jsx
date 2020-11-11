@@ -23,17 +23,13 @@ export const TagsInput = props => {
         onChange([...values, ...filteredValues])
     }
 
+    const tagsList = <TagsList values={values} onRemove={removeHandler} TagItemWrapper={TagItemWrapper} />
+
     return (
         <div style={tagsInputWrapper}>
-            <InputField
-                addNewValues={addNewValues}
-                {...inputFieldProps}
-            />
-            <TagsList
-                values={values}
-                onRemove={removeHandler}
-                TagItemWrapper={TagItemWrapper}
-            />
+            {tagsPosition === 'top' && tagsList}
+            <InputField addNewValues={addNewValues} {...inputFieldProps} />
+            {tagsPosition === 'bottom' && tagsList}
         </div>
     )
 }
