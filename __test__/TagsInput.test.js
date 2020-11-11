@@ -1,5 +1,7 @@
+import { InputField } from '../src/components/InputField'
 import React from 'react'
 import { TagsInput } from '../src/components/TagsInput'
+import { TagsList } from '../src/components/TagsList'
 import { mount } from 'enzyme'
 
 describe(TagsInput, () => {
@@ -15,6 +17,7 @@ describe(TagsInput, () => {
       TagItemWrapper: ({ children, removeHandler }) => (
         <div onClick={removeHandler}>{children}</div>
       ),
+      tagsPosition: 'bottom',
       ...customProps,
     }
 
@@ -50,5 +53,15 @@ describe(TagsInput, () => {
       .simulate('keydown', { key: 'Enter' })
 
     expect(onChange).toHaveBeenCalledWith(['one', 'two', 'three', 'four'])
+  })
+
+  test('should change tags position', () => {
+    const bottomPosition = getComponent({ tagsPosition: 'bottom' })
+    expect(bottomPosition.find('div').children().first().type()).toEqual(
+      InputField
+    )
+
+    const topPosition = getComponent({ tagsPosition: 'top' })
+    expect(topPosition.find('div').children().first().type()).toEqual(TagsList)
   })
 })
