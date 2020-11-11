@@ -6,6 +6,8 @@
 
 This is a simple react component for inputting tags.
 
+![demo](https://github.com/kilfro/tags-input/blob/tags-position/public/demo.png?raw=true)
+
 ## Install
 
 ```bash
